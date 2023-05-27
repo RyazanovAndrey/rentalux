@@ -1,0 +1,20 @@
+.advantages {
+
+    background-color: $color2;
+    @include paddind(45px);
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+    }
+
+    &__col {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    &__text {
+        color: $color4;
+    }
+}

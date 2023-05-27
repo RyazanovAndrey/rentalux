@@ -28,11 +28,19 @@
 }
 
 .home-btn {
+    position: relative;
     display: inline-block;
     width: 260px;
     color: $color2;
     background-color: $color1;
     padding: 20px 30px;
+    transition: 0.3s;
+    top: 0;
+
+    &:hover{
+        position: relative;
+        top: -2px;
+    }
 
     &::after{
         position: absolute;

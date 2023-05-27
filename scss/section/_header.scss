@@ -12,7 +12,7 @@
     &__logo {
         @include font(30px, 900);
         color: $color2;
-    } 
+    }
 
     &__info {
         display: flex;
@@ -35,10 +35,35 @@
 .menu {
 
     display: flex;
-    column-gap: 30px;
 
     &__link {
         color: $color2;
-        @include font(16px, 500)
+        @include font(16px, 500);
+        transition: 0.2s;
+        display: block;
+        padding: 10px 20px;
+
+        &:hover {
+            color: $color1;
+        }
+
     }
 }
+
+.menu__link_arrow{
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 5px;
+        border-width: 0 2px 2px 0;
+        border-color: black;
+        border-style: solid;
+        padding: 3px;
+        top: 35%;
+        transform: rotate(45deg);
+    }
+}
+

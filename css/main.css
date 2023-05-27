@@ -143,13 +143,33 @@ body {
 
 .menu {
   display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
 }
 .menu__link {
   color: #23272F;
   font-size: 16px;
   font-weight: 500;
+  transition: 0.2s;
+  display: block;
+  padding: 10px 20px;
+}
+.menu__link:hover {
+  color: #FBC701;
+}
+
+.menu__link_arrow {
+  position: relative;
+}
+.menu__link_arrow::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 5px;
+  border-width: 0 2px 2px 0;
+  border-color: black;
+  border-style: solid;
+  padding: 3px;
+  top: 35%;
+  transform: rotate(45deg);
 }
 
 .home {
@@ -179,14 +199,40 @@ body {
 }
 
 .home-btn {
+  position: relative;
   display: inline-block;
   width: 260px;
   color: #23272F;
   background-color: #FBC701;
   padding: 20px 30px;
+  transition: 0.3s;
+  top: 0;
+}
+.home-btn:hover {
+  position: relative;
+  top: -2px;
 }
 .home-btn::after {
   position: absolute;
   content: url(../../img/arrow-btn.svg);
   margin-left: 10px;
+}
+
+.advantages {
+  background-color: #23272F;
+  padding: 45px 0;
+}
+.advantages__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.advantages__col {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.advantages__text {
+  color: #F9F9F9;
 }/*# sourceMappingURL=main.css.map */
