@@ -1,0 +1,24 @@
+.list {
+
+    @include paddind(100px);
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+    }
+
+    &__col-header {
+    }
+
+    &__col-header-text {
+    }
+
+    &__col-header-btn {
+    }
+
+    &__col-title {
+    }
+}
