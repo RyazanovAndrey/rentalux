@@ -1,0 +1,44 @@
+.header {
+
+    @include paddind(15px);
+    border-bottom: 3px dashed $color1;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        @include font(30px, 900);
+        color: $color2;
+    } 
+
+    &__info {
+        display: flex;
+        column-gap: 10px;
+        width: 220px;
+
+    }
+
+    &__number-tel {
+        @include font(20px, 900);
+        color: $color2;
+    }
+
+    &__block {
+        display: flex;
+        column-gap: 35px;
+    }
+}
+
+.menu {
+
+    display: flex;
+    column-gap: 30px;
+
+    &__link {
+        color: $color2;
+        @include font(16px, 500)
+    }
+}

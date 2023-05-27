@@ -101,10 +101,92 @@ legend {
 
 body {
   font-family: "Roboto", sans-serif;
+  color: #23272F;
 }
 
 .container {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.header {
+  padding: 15px 0;
+  border-bottom: 3px dashed #FBC701;
+}
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  font-size: 30px;
+  font-weight: 900;
+  color: #23272F;
+}
+.header__info {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  width: 220px;
+}
+.header__number-tel {
+  font-size: 20px;
+  font-weight: 900;
+  color: #23272F;
+}
+.header__block {
+  display: flex;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+}
+
+.menu {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.menu__link {
+  color: #23272F;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.home {
+  min-height: 600px;
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(208, 208, 208, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.home__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 600px;
+}
+.home__tite {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 160px;
+  width: 240px;
+}
+.home__desc {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 50px 0;
+  width: 360px;
+}
+.home__home-img {
+  margin-top: 160px;
+  max-width: 690px;
+}
+
+.home-btn {
+  display: inline-block;
+  width: 260px;
+  color: #23272F;
+  background-color: #FBC701;
+  padding: 20px 30px;
+}
+.home-btn::after {
+  position: absolute;
+  content: url(../../img/arrow-btn.svg);
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */
