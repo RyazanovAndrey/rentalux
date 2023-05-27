@@ -1,0 +1,14 @@
+@mixin font($fz, $fw){
+    font-size: $fz;
+    font-weight: $fw;
+}
+
+@mixin paddind ($padding){
+    padding: $padding 0;
+}
+
+@mixin tablet {
+    @media(max-width: $tablet){
+        @content
+    }
+}
