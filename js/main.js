@@ -2,13 +2,15 @@ const links = document.querySelectorAll('.menu__link');
 const drop = document.querySelector('.drop');
 
 
-links.forEach(link =>{
-    link.addEventListener('click', (event)=> {
+links.forEach(item =>{
+    item.addEventListener('click', (event)=> {
+
+        // event.preventDefault();
         let links = event.target;
         let drop = links.closest('.menu__item').querySelector('.drop');
         if(drop){
-            drop.classList.toggle('open')
-            links.classList.toggle('arrow-rotate')
+            drop.classList.toggle('open');
+            links.classList.toggle('arrow-rotate');
         }
     })
 });
@@ -17,5 +19,18 @@ links.forEach(link =>{
 document.addEventListener('click', (event)=> {
     if(!event.target.closest('.menu')){
         drop.classList.remove('open');
+        links.forEach(item => item.classList.remove('arrow-rotate'));
+    }
+});
+
+
+// phone-mask
+
+mask('[data-tel]');
+const dataTel = document.querySelector('[data-tel]');
+
+dataTel.addEventListener('blur', ()=> {
+    if(dataTel.value == '+'){
+        dataTel.value = ''
     }
 })

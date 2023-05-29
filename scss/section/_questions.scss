@@ -1,0 +1,42 @@
+.questions {
+
+    background-color: $color4;
+    @include paddind(100px);
+
+    &__row {
+        display: flex;
+    }
+
+    &__col {
+
+        img{
+            max-width: 670px;
+        }
+    }
+
+    &__title {
+        @include font(25px, 700);
+    }
+
+    &__text {
+        @include font(16px, 400);
+        margin: 50px 0 24px 0;
+        max-width: 350px;
+    }
+
+    &__form {
+        height: 60px;
+        border: 1px solid $color1;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%;
+
+        &::placeholder{
+            color: rgb(224, 224, 224);
+        }
+    }
+}
+
+.btn-form{
+    width: 100%;
+}

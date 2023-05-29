@@ -17,7 +17,7 @@
                 <a href="#" class="header__logo">RentaLUX</a>
                 <nav>
                     <ul class="menu">
-                        <li class="menu__item"><a href="#" class="menu__link">Умови</a></li>
+                        <li class="menu__item"><a href="#rent-car" class="menu__link">Умови</a></li>
                         <li class="menu__item"><a href="#" class="menu__link">Оренда авто</a>
                             <ul class="drop">
                                 <li><a href="#" class="drop__link">Оренда авто типу седан</a></li>
@@ -25,9 +25,9 @@
                                 <li><a href="#" class="drop__link">Link</a></li>
                             </ul>
                         </li>
-                        <li class="menu__item"><a href="#" class="menu__link">Переваги</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Відгуки</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+                        <li class="menu__item"><a href="#list" class="menu__link">Переваги</a></li>
+                        <li class="menu__item"><a href="#reviews" class="menu__link">Відгуки</a></li>
+                        <li class="menu__item"><a href="#questions" class="menu__link">Контакти</a></li>
                     </ul>
                 </nav>
                 <div class="header__block">
@@ -82,7 +82,7 @@
             </div>
         </section>
 
-        <section class="rent-car">
+        <section class="rent-car" id="rent-car">
             <div class="container">
                 <div class="rent-car__title">Умови оренди автомобіля</div>
                 <div class="rent-car__row">
@@ -127,7 +127,7 @@
             </div>
         </section>
 
-        <section class="list">
+        <section class="list" id="list">
             <div class="container">
                 <div class="list__row">
                     <div class="list__col">
@@ -155,7 +155,7 @@
             </div>
         </section>
 
-        <section class="reviews">
+        <section class="reviews" id="reviews">
             <div class="container">
                 <div class="reviews__title">Відгуки</div>
                 <div class="reviews__row">
@@ -170,7 +170,8 @@
                     <div class="reviews__card">
                         <img src="img/face/02.jpg" alt="" class="reviews__face">
                         <h3 class="reviews__name">Інна, 35 років</h3>
-                        <p class="reviews__text">Дуже тішить Ваш сервіс. Зустрічаю ВІП клієнтів завжди лише на Ваших машинах.</p>
+                        <p class="reviews__text">Дуже тішить Ваш сервіс. Зустрічаю ВІП клієнтів завжди лише на Ваших
+                            машинах.</p>
                     </div>
 
                     <div class="reviews__card">
@@ -183,13 +184,53 @@
                     <div class="reviews__card">
                         <img src="img/face/04.jpg" alt="" class="reviews__face">
                         <h3 class="reviews__name">Марина, 30 років</h3>
-                        <p class="reviews__text">Люблю ваш сервіс. Не люблю таксі. У програмі швидко знаходжу машину поблизу.</p>
+                        <p class="reviews__text">Люблю ваш сервіс. Не люблю таксі. У програмі швидко знаходжу машину
+                            поблизу.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions" id="questions">
+            <div class="container">
+                <div class="questions__row">
+                    <div class="questions__col">
+                        <div class="questions__title">Залишились питання</div>
+                        <h3 class="questions__text">Ми передзвонимо Вам та проконсультуємо з будь-якого питання</h3>
+                        <input type="text" class="questions__form" placeholder="Ваше ім’я">
+                        <input type="text" class="questions__form" placeholder="Ваш телефон" data-tel>
+                        <button class="home-btn btn-form">Залишити заявку</button>
+                    </div>
+                    <div class="questions__col">
+                        <img src="img/section-car-2.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__logo">2023 <strong>RentaLUX</strong></div>
+                <div class="footer__wrapper">
+                    <div class="footer__info">
+                        <img src="img/phone-icon.svg" alt="">
+                        <div class="footer__tel">+38 (099) 823 22 56</div>
+                    </div>
+                    <div class="footer_social">
+                        <img src="img/facebook-icon.svg" alt="">
+                        <img src="img/instagram-icon.svg" alt="">
+                    </div>
+                    <div class="footer__btn">Завантажити програму</div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/phoneMask/mask.js"></script>
+    <script src="js/phoneMask/mask_list.js"></script>
     <script src="js/main.js"></script>
 </body>
 

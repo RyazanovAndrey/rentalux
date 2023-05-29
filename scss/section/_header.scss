@@ -1,7 +1,12 @@
 .header {
 
+    position: sticky;
+    top: 0;
+    width: 100%;
     @include paddind(15px);
-    border-bottom: 3px dashed $color1;
+    border-bottom: 1px dashed $color1;
+    background-color: #fff;
+    z-index: 99;
 
     &__row {
         display: flex;
@@ -85,7 +90,6 @@
     background-color: $color4;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.26);
     opacity: 0;
-    border-radius: 10px;
     transition: 0.3s;
 
     &__link {

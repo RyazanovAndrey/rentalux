@@ -1,0 +1,42 @@
+.footer {
+
+    border-top: 3px dashed $color1;
+    @include paddind(25px);
+    background-color: $color4;
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+
+    &_social {
+        margin: 0 65px 0 50px;
+    }
+
+    &__logo {
+        @include font(32px, 500);
+        margin-right: 265px;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__tel {
+        @include font(20px, 900);
+    }
+
+    &__btn {
+        display: block;
+        cursor: pointer;
+        padding: 20px 30px;
+        border: 1px solid $color1;
+    }
+}
