@@ -37,6 +37,7 @@
     display: flex;
 
     &__link {
+        position: relative;
         color: $color2;
         @include font(16px, 500);
         transition: 0.2s;
@@ -46,24 +47,61 @@
         &:hover {
             color: $color1;
         }
+    }
 
+    &__item {
+        position: relative;
     }
 }
 
-.menu__link_arrow{
-    position: relative;
-
-    &::after{
-        position: absolute;
-        content: '';
-        top: 0;
-        right: 5px;
-        border-width: 0 2px 2px 0;
-        border-color: black;
-        border-style: solid;
-        padding: 3px;
-        top: 35%;
-        transform: rotate(45deg);
-    }
+.menu__item:nth-child(2) .menu__link{
+    color: $color1;
 }
 
+.menu__item:nth-child(2) .menu__link::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 5px;
+    border-width: 0 2px 2px 0;
+    border-color: $color1;
+    border-style: solid;
+    padding: 3px;
+    top: 35%;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+.menu__item:nth-child(2) .menu__link.arrow-rotate::after{
+    transform: rotate(226deg);
+    top: 45%;
+}
+
+.drop {
+    position: absolute;
+    width: 300px;
+    top: 120%;
+    left: 0;
+    background-color: $color4;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.26);
+    opacity: 0;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &__link {
+        display: block;
+        padding: 20px 20px;
+        color: $color2;
+        border-bottom: 1px solid rgb(231, 231, 231);
+        transition: 0.3s;
+
+        &:hover{
+            color: $color1;
+            padding-left: 25px;
+        }
+    }
+
+    &.open {
+        opacity: 1;
+    }
+}
