@@ -324,4 +324,70 @@ body {
 .list__row {
   display: flex;
   justify-content: space-between;
+}
+.list__col-header {
+  display: flex;
+  align-items: center;
+  display: flex;
+}
+.list__col-header-text {
+  width: 270px;
+  margin-right: 140px;
+  color: #C0C0C0;
+}
+.list__col-header-btn {
+  margin-right: 40px;
+  cursor: pointer;
+}
+.list__col-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+.list__col-header-link {
+  color: #FBC701;
+  border-bottom: 1px solid #FBC701;
+}
+.list__auto {
+  line-height: 35px;
+  margin-bottom: 35px;
+  margin-left: 22px;
+}
+.list__auto li {
+  list-style-image: url(../../img/list-item.svg);
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+.reviews {
+  padding: 100px 0;
+  background-color: #23272F;
+}
+.reviews__title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #F9F9F9;
+  margin-bottom: 60px;
+}
+.reviews__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.reviews__card {
+  text-align: center;
+}
+.reviews__face {
+  border-radius: 100%;
+  border: 5px dashed #FBC701;
+  margin-bottom: 35px;
+}
+.reviews__name {
+  font-size: 20px;
+  font-weight: 400;
+  color: #FBC701;
+  margin-bottom: 35px;
+}
+.reviews__text {
+  color: #F9F9F9;
 }/*# sourceMappingURL=main.css.map */

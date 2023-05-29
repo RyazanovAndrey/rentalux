@@ -8,17 +8,44 @@
     }
 
     &__col {
+        
     }
 
     &__col-header {
+        display: flex;
+        align-items: center;
+        display: flex;
     }
 
     &__col-header-text {
+        width: 270px;
+        margin-right: 140px;
+        color: $color5;
     }
 
     &__col-header-btn {
+        margin-right: 40px;
+        cursor: pointer;
     }
 
     &__col-title {
+        @include font(25px, 700);
+        margin-bottom: 70px;
+    }
+
+    &__col-header-link{
+        color: $color1;
+        border-bottom: 1px solid $color1;
+    }
+    &__auto{
+        line-height: 35px;
+        margin-bottom: 35px;
+        margin-left: 22px;
+
+        & li{
+            list-style-image: url(../../img/list-item.svg);
+            padding-left: 30px;
+            font-size: 18px;
+        }
     }
 }

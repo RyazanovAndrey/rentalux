@@ -8,8 +8,8 @@ links.forEach(link =>{
         let drop = links.closest('.menu__item').querySelector('.drop');
         if(drop){
             drop.classList.toggle('open')
+            links.classList.toggle('arrow-rotate')
         }
-        links.classList.toggle('arrow-rotate')
     })
 });
 
@@ -17,6 +17,5 @@ links.forEach(link =>{
 document.addEventListener('click', (event)=> {
     if(!event.target.closest('.menu')){
         drop.classList.remove('open');
-        document.querySelector('.menu__link.arrow-rotate::after').remove()
     }
 })
