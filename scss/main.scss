@@ -4,6 +4,7 @@
 @import './base/base';
 
 @import './section/header';
+@import './section/mobile-menu';
 @import './section/home';
 @import './section/advantages';
 @import './section/rent-car';
@@ -11,3 +12,7 @@
 @import './section/reviews';
 @import './section/questions';
 @import './section/footer';
+
+.hidden{
+    display: none;
+}
