@@ -44,9 +44,7 @@
 
     &::after{
         position: absolute;
-        content: url(../../img/arrow-btn.svg);
+        content: url(../img/arrow-btn.svg);
         margin-left: 10px;
     }
 }
-
-.btn {}
