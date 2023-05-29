@@ -5,7 +5,6 @@ const drop = document.querySelector('.drop');
 links.forEach(item =>{
     item.addEventListener('click', (event)=> {
 
-        // event.preventDefault();
         let links = event.target;
         let drop = links.closest('.menu__item').querySelector('.drop');
         if(drop){
@@ -35,6 +34,7 @@ dataTel.addEventListener('blur', ()=> {
     }
 })
 
+// mobile-menu
 
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');

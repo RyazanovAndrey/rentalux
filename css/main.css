@@ -212,6 +212,12 @@ html {
   transform: rotate(45deg);
   transition: 0.3s;
 }
+@media (max-width: 1030px) {
+  .menu__item:nth-child(2) .menu__link::after {
+    top: 40%;
+    right: -25px;
+  }
+}
 
 .menu__item:nth-child(2) .menu__link.arrow-rotate::after {
   transform: rotate(226deg);
@@ -241,6 +247,7 @@ html {
 }
 .drop.open {
   opacity: 1;
+  z-index: 99;
 }
 
 .burger {
@@ -259,15 +266,25 @@ html {
   position: absolute;
   top: calc(50% - 3px);
   width: 100%;
-  height: 6px;
+  height: 5px;
   background-color: #020202;
   border-radius: 5px;
+  transition: 0.3s;
 }
 .burger span:first-child {
-  transform: translateY(-10px);
+  transform: translateY(-13px);
 }
 .burger span:last-child {
-  transform: translateY(10px);
+  transform: translateY(13px);
+}
+.burger.active span:first-child {
+  transform: translateY(0) rotate(-45deg);
+}
+.burger.active span:last-child {
+  transform: translateY(0) rotate(45deg);
+}
+.burger.active span {
+  transform: scale(0);
 }
 
 .home {
@@ -305,6 +322,12 @@ html {
   margin-top: 160px;
   max-width: 690px;
 }
+@media (max-width: 1030px) {
+  .home__home-img {
+    max-width: 520px;
+    margin-top: 100px;
+  }
+}
 
 .home-btn {
   position: relative;
@@ -333,8 +356,17 @@ html {
 .advantages__row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  gap: 20px;
+}
+@media (max-width: 1030px) {
+  .advantages__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .advantages__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .advantages__col {
   display: flex;
@@ -357,6 +389,16 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 18px;
+}
+@media (max-width: 1030px) {
+  .rent-car__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .rent-car__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .rent-car__text {
   color: #C0C0C0;
@@ -392,19 +434,32 @@ html {
 .list {
   padding: 100px 0;
 }
+.list__col {
+  text-align: center;
+}
 .list__row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 160px;
+}
+@media (max-width: 1030px) {
+  .list__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .list__col-header {
   display: flex;
   align-items: center;
-  display: flex;
 }
 .list__col-header-text {
   width: 270px;
   margin-right: 140px;
   color: #C0C0C0;
+}
+@media (max-width: 576px) {
+  .list__col-header-text {
+    margin-right: unset;
+  }
 }
 .list__col-header-btn {
   margin-right: 40px;
@@ -418,9 +473,16 @@ html {
 .list__col-header-link {
   color: #FBC701;
   border-bottom: 1px solid #FBC701;
+  width: 160px;
+}
+@media (max-width: 1030px) {
+  .list__col-header-link {
+    width: 140px;
+  }
 }
 .list__auto {
   line-height: 35px;
+  text-align: left;
   margin-bottom: 35px;
   margin-left: 22px;
 }
@@ -445,6 +507,16 @@ html {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
 }
+@media (max-width: 1030px) {
+  .reviews__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .reviews__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .reviews__card {
   text-align: center;
 }
@@ -468,10 +540,24 @@ html {
   padding: 100px 0;
 }
 .questions__row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1030px) {
+  .questions__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.questions__col {
+  text-align: center;
 }
 .questions__col img {
   max-width: 670px;
+}
+@media (max-width: 1030px) {
+  .questions__col img {
+    max-width: 520px;
+  }
 }
 .questions__title {
   font-size: 25px;
@@ -482,6 +568,7 @@ html {
   font-weight: 400;
   margin: 50px 0 24px 0;
   max-width: 350px;
+  text-align: left;
 }
 .questions__form {
   height: 60px;
@@ -508,11 +595,24 @@ html {
 }
 .footer__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1030px) {
+  .footer__row {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 576px) {
+  .footer__row {
+    justify-content: unset;
+  }
+}
 .footer__wrapper {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
   align-items: center;
 }
 .footer_social {

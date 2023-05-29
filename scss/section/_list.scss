@@ -2,22 +2,31 @@
 
     @include paddind(100px);
 
-    &__row {
-        display: flex;
-        justify-content: space-between;
+    &__col{
+        text-align: center;
     }
 
-    &__col {
-        
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 160px;
+
+        @include tablet{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__col-header {
         display: flex;
         align-items: center;
-        display: flex;
     }
 
     &__col-header-text {
+
+        @include mobile{
+            margin-right: unset;
+        }
+
         width: 270px;
         margin-right: 140px;
         color: $color5;
@@ -36,9 +45,15 @@
     &__col-header-link{
         color: $color1;
         border-bottom: 1px solid $color1;
+        width: 160px;
+
+        @include tablet{
+            width: 140px;
+        }
     }
     &__auto{
         line-height: 35px;
+        text-align: left;
         margin-bottom: 35px;
         margin-left: 22px;
 

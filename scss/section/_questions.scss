@@ -4,12 +4,24 @@
     @include paddind(100px);
 
     &__row {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include tablet{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__col {
 
+        text-align: center;
+
         img{
+
+            @include tablet{
+                max-width: 520px;
+            }
+
             max-width: 670px;
         }
     }
@@ -22,6 +34,7 @@
         @include font(16px, 400);
         margin: 50px 0 24px 0;
         max-width: 350px;
+        text-align: left;
     }
 
     &__form {

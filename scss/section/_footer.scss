@@ -6,12 +6,23 @@
 
     &__row{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+
+        @include tablet{
+            justify-content: space-around;
+        }
+
+        @include mobile{
+            justify-content: unset;
+        }
     }
 
     &__wrapper{
         display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
         align-items: center;
     }
 
