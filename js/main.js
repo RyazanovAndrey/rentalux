@@ -9,6 +9,7 @@ links.forEach(item => {
 
         menu.classList.remove('active');
         burger.classList.remove('active');
+        stopScroll.classList.remove('stop-scroll');
 
         let links = event.target;
         let drop = links.closest('.menu__item').querySelector('.drop');
