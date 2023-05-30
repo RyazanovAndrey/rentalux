@@ -18,11 +18,17 @@
 
         img{
 
+            max-width: 600px;
+
             @include tablet{
                 max-width: 520px;
             }
-
             max-width: 670px;
+
+            @include mobile{
+                width: 350px;
+                margin-top: 50px;
+            }
         }
     }
 

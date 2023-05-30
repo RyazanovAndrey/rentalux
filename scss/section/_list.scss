@@ -1,22 +1,47 @@
 .list {
 
     @include paddind(100px);
-
-    &__col{
-        text-align: center;
+    @include tablet1{
+        padding-top: unset;
     }
 
-    &__row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 160px;
+    &__col{
+        text-align: left;
+    }
 
-        @include tablet{
-            grid-template-columns: repeat(1, 1fr);
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+
+        @include tablet1{
+            flex-direction: column-reverse;
+        }
+
+        @include mobile{
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__col-header-img{
+        @include mobile{
+            width: 350px;
         }
     }
 
     &__col-header {
+
+        @include tablet1{
+            margin-top: 50px;
+        }
+
+
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        align-items: center;
+    }
+
+    &__col-block{
         display: flex;
         align-items: center;
     }
@@ -45,11 +70,6 @@
     &__col-header-link{
         color: $color1;
         border-bottom: 1px solid $color1;
-        width: 160px;
-
-        @include tablet{
-            width: 140px;
-        }
     }
     &__auto{
         line-height: 35px;

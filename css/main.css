@@ -125,6 +125,7 @@ html {
 }
 .header__row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -328,6 +329,11 @@ html {
     margin-top: 100px;
   }
 }
+@media (max-width: 1030px) {
+  .home__home-img {
+    width: 400px;
+  }
+}
 
 .home-btn {
   position: relative;
@@ -338,6 +344,12 @@ html {
   padding: 20px 30px;
   transition: 0.3s;
   top: 0;
+}
+@media (max-width: 576px) {
+  .home-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 .home-btn:hover {
   position: relative;
@@ -398,6 +410,7 @@ html {
 @media (max-width: 576px) {
   .rent-car__row {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 60px;
   }
 }
 .rent-car__text {
@@ -434,20 +447,45 @@ html {
 .list {
   padding: 100px 0;
 }
+@media (max-width: 768px) {
+  .list {
+    padding-top: unset;
+  }
+}
 .list__col {
-  text-align: center;
+  text-align: left;
 }
 .list__row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 160px;
+  display: flex;
+  flex-wrap: wrap;
 }
-@media (max-width: 1030px) {
+@media (max-width: 768px) {
   .list__row {
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 576px) {
+  .list__row {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 576px) {
+  .list__col-header-img {
+    width: 350px;
   }
 }
 .list__col-header {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .list__col-header {
+    margin-top: 50px;
+  }
+}
+.list__col-block {
   display: flex;
   align-items: center;
 }
@@ -473,12 +511,6 @@ html {
 .list__col-header-link {
   color: #FBC701;
   border-bottom: 1px solid #FBC701;
-  width: 160px;
-}
-@media (max-width: 1030px) {
-  .list__col-header-link {
-    width: 140px;
-  }
 }
 .list__auto {
   line-height: 35px;
@@ -552,11 +584,18 @@ html {
   text-align: center;
 }
 .questions__col img {
+  max-width: 600px;
   max-width: 670px;
 }
 @media (max-width: 1030px) {
   .questions__col img {
     max-width: 520px;
+  }
+}
+@media (max-width: 576px) {
+  .questions__col img {
+    width: 350px;
+    margin-top: 50px;
   }
 }
 .questions__title {

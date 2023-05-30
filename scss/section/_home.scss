@@ -36,12 +36,22 @@
         margin-top: 100px;
        }
 
+       @include tablet{
+        width: 400px;
+       }
+
         margin-top: 160px;
         max-width: 690px;
     }
 }
 
 .home-btn {
+
+    @include mobile{
+        width: 100%;
+        text-align: center;
+    }
+
     position: relative;
     display: inline-block;
     width: 260px;
