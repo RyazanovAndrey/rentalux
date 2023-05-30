@@ -114,6 +114,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -682,8 +686,4 @@ html {
   cursor: pointer;
   padding: 20px 30px;
   border: 1px solid #FBC701;
-}
-
-.hidden {
-  display: none;
 }/*# sourceMappingURL=main.css.map */

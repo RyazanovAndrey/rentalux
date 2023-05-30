@@ -1,15 +1,21 @@
 const links = document.querySelectorAll('.menu__link');
 const drop = document.querySelector('.drop');
+const menu = document.querySelector('.menu');
+const burger = document.querySelector('.burger');
 
 
 links.forEach(item => {
     item.addEventListener('click', (event) => {
+
+        menu.classList.remove('active');
+        burger.classList.remove('active');
 
         let links = event.target;
         let drop = links.closest('.menu__item').querySelector('.drop');
         if (drop) {
             drop.classList.toggle('open');
             links.classList.toggle('arrow-rotate');
+
         }
     })
 });
@@ -75,10 +81,10 @@ dataTel.addEventListener('blur', () => {
 
 // mobile-menu
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
+const stopScroll = document.body
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     menu.classList.toggle('active');
+    stopScroll.classList.toggle('stop-scroll');
 })
