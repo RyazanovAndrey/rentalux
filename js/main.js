@@ -27,6 +27,8 @@ document.addEventListener('click', (event) => {
 const btnTheme = document.querySelector('.header__btn-theme');
 const theme = document.querySelector('.theme');
 const themeIcon = document.querySelector('.theme-icon');
+const headerTel = document.querySelector('.header__tel');
+const footerTel = document.querySelector('.footer-tel-ico');
 
 let toggleTheme = false;
 
@@ -34,6 +36,9 @@ if(localStorage.getItem('theme') == 'true'){
     theme.href = 'css/dark.css';
     themeIcon.src = 'img/sun-icon.svg';
     localStorage.setItem('theme', true);
+    headerTel.src = 'img/phone-icon-dark.svg';
+    footerTel.src = 'img/phone-icon-dark.svg'
+    
 }
 
 btnTheme.addEventListener('click', () => {
@@ -43,11 +48,16 @@ btnTheme.addEventListener('click', () => {
         themeIcon.src = 'img/sun-icon.svg';
         localStorage.setItem('theme', true);
         toggleTheme = !toggleTheme;
+        headerTel.src = 'img/phone-icon-dark.svg';
+        footerTel.src = 'img/phone-icon-dark.svg'
+
     }else{
         theme.href = 'css/main.css';
         themeIcon.src = 'img/moon-icon.svg';
         localStorage.setItem('theme', false);
         toggleTheme = !toggleTheme;
+        headerTel.src = 'img/phone-icon.svg'
+        footerTel.src = 'img/phone-icon.svg'
     }
 })
 

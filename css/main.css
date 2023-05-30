@@ -669,6 +669,8 @@ html {
 }
 .footer__info {
   display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   align-items: center;
 }
 .footer__tel {
