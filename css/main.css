@@ -458,6 +458,8 @@ html {
 .list__row {
   display: flex;
   flex-wrap: wrap;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
 }
 @media (max-width: 768px) {
   .list__row {
@@ -468,6 +470,9 @@ html {
   .list__row {
     flex-direction: column-reverse;
   }
+}
+.list__col-header-img {
+  margin-top: 70px;
 }
 @media (max-width: 576px) {
   .list__col-header-img {

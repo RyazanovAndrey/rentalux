@@ -12,6 +12,7 @@
     &__row{
         display: flex;
         flex-wrap: wrap;
+        column-gap: 160px;
 
         @include tablet1{
             flex-direction: column-reverse;
@@ -23,6 +24,9 @@
     }
 
     &__col-header-img{
+
+        margin-top: 70px;
+
         @include mobile{
             width: 350px;
         }
